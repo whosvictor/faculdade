@@ -349,12 +349,12 @@ FROM (
   WHERE a.actor_id != 8
 ) as s
   JOIN actor a8 ON a8.first_name = s.first_name
-WHERE a8.actor_id=8
+WHERE a8.actor_id=8;
 
 -- --------------------------------------------------------------------
 
 
---todos os atores que aparecem no filme Academy Dinosaur 27
+-- todos os atores que aparecem no filme Academy Dinosaur 27
 
 select first_name, last_name 
 from actor
@@ -378,7 +378,7 @@ INNER JOIN film_actor fa
 ON f.film_id = fa.film_id
 INNER JOIN actor a
 ON fa.actor_id =a.actor_id
-WHERE a.first_name LIKE '%sandra%' OR a.last_name LIKE '%sandra%'
+WHERE a.first_name LIKE '%sandra%' OR a.last_name LIKE '%sandra%';
 
 
 
