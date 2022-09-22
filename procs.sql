@@ -10,7 +10,7 @@ DELIMITER ;
 
 CALL selecionar_produtos(10);
 
-
+-- +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 DELIMITER $$
@@ -23,4 +23,21 @@ DELIMITER ;
 
 CALL contagem_produtos(@total);
 select @total;
+
+
+-- ++++++++++++++++++++++++++++++++
+
+DELIMITER $$
+
+CREATE PROCEDURE multiplicar_por_elemesmo(inOUT numero INT)
+begin 
+	set numero = numero * numero;
+end$$
+DELIMITER ; 
+
+set @valor = 5;
+call multiplicar_por_elemesmo(@valor);
+select @valor;
+-- ++++++++++++++++++++++++++++++
+
 
